@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
   addData(fctId: HTMLInputElement, fctName: HTMLInputElement, fctLastN: HTMLInputElement, fctSex: HTMLInputElement, fctDirection: HTMLInputElement, fctDateB: HTMLInputElement, fctNact: HTMLInputElement, fctDateExpd: HTMLInputElement, fctDateCad:HTMLInputElement){
 
     this.instancePersonalDataService.addInforPersonal({
-          id: fctId.value,
+      id: fctId.value,
       name: fctName.value,
       lastname: fctLastN.value,
       sex: fctSex.value,
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
           if (videoDevices.length > 0){
               let choosenDev;
               for (const dev of videoDevices){
-                  if (dev.label.includes('front')){
+                  if (dev.label.includes('rear')){
                       choosenDev = dev;
                       break;
                   }

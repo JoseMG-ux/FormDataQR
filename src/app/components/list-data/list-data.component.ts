@@ -18,7 +18,6 @@ export class ListDataComponent implements OnInit {
 
   ngOnInit(){
     this.tasks = this.instancePersonalDataService.getInfoPersonal()
-    // this.Datos = this.instancePersonalDataService.getInfoPersonal();
     console.log(this.tasks);
   }
 
