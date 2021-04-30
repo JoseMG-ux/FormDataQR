@@ -82,13 +82,16 @@ export class AppComponent implements OnInit {
           if (videoDevices.length > 0){
               let choosenDev;
               for (const dev of videoDevices){
-                  if (dev.label.includes('back')){
+                console.log(videoDevices[0]);
+                  if (dev.label.includes('front')){
                       choosenDev = dev;
                       break;
+
                   }
               }
               if (choosenDev) {
                   this.qrScannerComponent.chooseCamera.next(choosenDev);
+
               } else {
                   this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
               }
