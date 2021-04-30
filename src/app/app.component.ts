@@ -74,6 +74,11 @@ export class AppComponent implements OnInit {
   ngAfterViewInit(): void {
         this.qrScannerComponent.getMediaDevices().then(devices => {
           console.log(devices);
+          console.log(devices[0].kind);
+          console.log(devices[1].kind);
+          console.log(devices[2].kind);
+
+          let a = window.prompt(devices[0].kind + devices[1].kind + devices[2].kind)
           const videoDevices: MediaDeviceInfo[] = [];
           for (const device of devices) {
               if (device.kind.toString() === 'videoinput') {
