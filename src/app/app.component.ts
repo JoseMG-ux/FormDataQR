@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
           if (videoDevices.length > 0){
               let choosenDev;
               for (const dev of videoDevices){
-                  if (dev.label.includes('')){
+                  if (dev.label.includes('back')){
                       choosenDev = dev;
                       break;
                   }
